@@ -3,17 +3,37 @@
 How this list stays accurate. Contributors want [contributing.md](contributing.md)
 instead.
 
-## Checks that run on every pull request
+## Working directly on main
+
+This list is maintained by committing straight to `main`, not through pull
+requests. Branch protection allows that: it blocks force pushes and branch
+deletion, and it requires the checks on any pull request a contributor opens,
+but it does not enforce against administrators.
+
+Every commit is authored by `dfieser`. The identity is pinned in this
+repository's own config, not just the global one, so a change to the global
+config cannot silently reassign authorship:
+
+```bash
+git config --local user.name
+git config --local user.email
+```
+
+Nothing else may author a commit here. Dependabot was removed for that reason,
+since it works only by opening pull requests that land bot-authored commits.
+Update the action versions in `.github/workflows` by hand instead.
+
+## Checks that run on every push
 
 Two workflows guard the list:
 
 - `lint.yml` runs `awesome-lint`, which enforces the Awesome specification: the
   heading, the badge, the table of contents, the entry format, and the presence
   of a license, a code of conduct, and contribution guidelines.
-- `link-check.yml` runs `lychee` over `readme.md` on every pull request and again
-  every Monday at 06:00 UTC.
+- `link-check.yml` runs `lychee` over `readme.md` on every push and again every
+  Monday at 06:00 UTC.
 
-Run both locally before merging anything large:
+Run both locally before pushing anything large:
 
 ```bash
 npx --yes awesome-lint
@@ -77,6 +97,7 @@ Projects rot. Run these on a schedule:
 | Quarterly | Re-read entries marked archived and confirm they still earn a place |
 | Quarterly | Sweep the field for new work, especially MCP servers, which appear fast |
 | Yearly | Re-read the scope statement against what the list has become |
+| Yearly | Bump the action versions in `.github/workflows`, which nothing updates automatically |
 
 When a project moves, update the link rather than deleting the entry. GitHub
 redirects old slugs, which hides breakage from the link checker, so a moved
