@@ -1,0 +1,34 @@
+name: Report a broken or outdated entry
+description: Flag a dead link, an archived project, or a description that is wrong
+title: "Fix: <entry name>"
+labels: [maintenance]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+      placeholder: MCP LAMMPS
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong?
+      options:
+        - The link is dead or moved
+        - The project is archived or abandoned
+        - The description is inaccurate
+        - It is in the wrong section
+        - It is out of scope and should be removed
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: Details
+      description: What did you find? Include a replacement link or wording if you have one.
+    validations:
+      required: true

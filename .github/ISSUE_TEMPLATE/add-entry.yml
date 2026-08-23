@@ -1,0 +1,75 @@
+name: Suggest an entry
+description: Propose a tool, model, benchmark, or paper for the list
+title: "Add: <project name>"
+labels: [suggestion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A pull request is faster than an issue if you are comfortable opening one.
+        See the [contribution guidelines](../blob/main/contributing.md) for the entry format.
+
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      placeholder: ChemCrow
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The source repository, or the paper if no public code exists.
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - MCP Servers
+        - Agents and Multi-Agent Frameworks
+        - Language Models
+        - Literature Mining and Extraction
+        - Benchmarks and Evaluation
+        - Datasets and Corpora
+        - Generative and Foundation Models
+        - Agent Skills
+        - Reviews and Surveys
+        - Communities and Events
+        - Related Lists
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What does it do?
+      description: One or two sentences on what the project does and who uses it.
+    validations:
+      required: true
+
+  - type: input
+    id: activity
+    attributes:
+      label: Last release or commit
+      placeholder: June 2026
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The project is open and anyone can reach it
+          required: true
+        - label: It has a README or paper explaining how to use it
+          required: true
+        - label: It sits at the intersection of language models or agents and materials or chemistry
+          required: true

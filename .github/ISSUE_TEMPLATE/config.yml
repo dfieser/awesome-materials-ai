@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or general discussion
+    url: https://github.com/dfieser/awesome-materials-ai/discussions
+    about: Ask about scope, suggest a new section, or discuss the field.
+  - name: Report a malicious or hijacked link
+    url: https://github.com/dfieser/awesome-materials-ai/blob/main/security.md
+    about: Report privately instead of opening a public issue.
