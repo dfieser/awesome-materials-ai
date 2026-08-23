@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Awesome Materials AI"
+abstract: >-
+  A curated list of language models, agents, and Model Context Protocol servers
+  for materials science and chemistry, covering scientific MCP servers, agent
+  frameworks, domain-adapted models, literature mining tools, benchmarks, and
+  datasets.
+message: "If this list supports your work, please cite it."
+type: dataset
+authors:
+  - family-names: Fieser
+    given-names: David
+repository-code: "https://github.com/dfieser/awesome-materials-ai"
+license: CC0-1.0
+keywords:
+  - materials informatics
+  - large language models
+  - model context protocol
+  - chemistry
+  - artificial intelligence
+  - awesome list
+version: "1.0.0"
+date-released: "2026-08-23"
