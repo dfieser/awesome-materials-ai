@@ -42,6 +42,7 @@ The Model Context Protocol lets an assistant call external tools directly. These
 - [mp-api MCP Server](https://docs.materialsproject.org/services/ml-and-ai-applications/mcp) - Official Materials Project server, shipped with the mp-api client since version 0.46.
 - [OPTIMADE MCP Server](https://github.com/dianfengxiaobo/optimade-mcp-server) - Queries any OPTIMADE-compatible materials database with configurable filter presets.
 - [PubChem MCP Server](https://github.com/cyanheads/pubchem-mcp-server) - PubChem compounds, properties, safety data, bioactivity, and cross-references.
+- [Space Mushroom MCP](https://github.com/simulsarker007/space-mushroom-mcp) - Remote server for a sourced open materials database, with units, methods, and sources per value.
 
 ### Computation and Simulation
 
